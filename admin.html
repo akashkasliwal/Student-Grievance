@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Login Page</title>
+<script>  
+function validateadmin(){  
+var username=document.loginForm.username.value;  
+var password=document.loginForm.password.value;  
+  
+if (username==null || username==""){  
+  alert("Email can't be blank..."); 
+
+  return false;  
+}
+else if(password==null || password==""){  
+	  alert("Password field cant be blank....");  
+	  return false;  
+	  }
+else if(password.length<6){  
+		  alert("Password must be at least 6 characters long.");  
+		  return false;  
+		  }
+return true;
+}  
+</script>
+</head>
+<body>
+<form name="loginForm" method="post" action="adminlogin.jsp" onsubmit="return validateadmin()">
+<h1>AdminLogin</h1>
+         User Name:     <input type="text" name="username"><br/>  
+         Password: <input type="password" name="password"><br/> 
+        <!--  <label for="class">Choose your class:</label>
+          <select id="class" name="class" form="regform">
+                    <option value="FY">First year</option>
+                    <option value="SE">Second Year</option>
+                    <option value="TE">Third Year</option>
+                    <option value="BE">Final Year</option>
+          </select><br><br>-->
+         <input type="reset" value="reset">  
+         <input type="submit" value="login"> <br/>
+
+</form>
+</body>
+</html>
